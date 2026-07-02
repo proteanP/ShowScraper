@@ -20,9 +20,12 @@ The scraper has been moved to a separate repository:
 2. `npm install`
 3. `npm run dev`
 
-To build and deploy the frontend:
+To build the frontend locally:
 
-- `bin/deploy`
+- `cd frontend`
+- `npm run build`
+
+Frontend deployment runs through GitHub Pages Actions after changes are merged to `master`.
 
 ## LLM Server Quickstart
 

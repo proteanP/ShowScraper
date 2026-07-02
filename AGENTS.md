@@ -47,7 +47,7 @@
 - If editing Claude-specific guidance, keep it brief and point back here.
 - Preserve existing CORS/rate-limit/env behaviors unless requirements change.
 - For container work on the LLM server, keep Docker assets at repo root (`docker-compose.yml`) and `llm-server/` (`Dockerfile`, `.dockerignore`) so the backend can be built and run independently of the frontend.
-- After making code changes, default to committing them, pushing `master`, and running the deploy script unless the user explicitly says not to.
+- After making code changes, default to committing them and opening a PR unless the user explicitly asks for direct publishing. Frontend deployment is handled by GitHub Pages Actions after merges to `master`.
 
 ## Common troubleshooting
 - SSE not working: verify backend running on `localhost:8000`, CORS origins, and no adblock; check rate limits (429).
