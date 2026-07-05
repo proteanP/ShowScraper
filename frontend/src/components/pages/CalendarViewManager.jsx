@@ -4,6 +4,7 @@ import { useRecoilState, useRecoilValue } from 'recoil';
 import * as Atoms from '../../state/atoms';
 import SearchVenuesForm from '../event_list/SearchVenuesForm';
 import EventListView from '../event_list/EventListView';
+import OtherEventLists from '../header/OtherEventLists';
 import { FILE_DATE_FORMAT } from '../../utils/dateUtils';
 
 const DAY_LABELS = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
@@ -65,6 +66,8 @@ const CalendarViewManager = () => {
             {displayMonth.clone().add(1, 'month').format('MMMM')}
           </button>
         </div>
+
+        <OtherEventLists />
 
         <div className='calendar-grid'>
           {DAY_LABELS.map((label) => (

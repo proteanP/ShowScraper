@@ -38,9 +38,6 @@ function App({ route }) {
   if (route === "TextAndImagesView") {
     currentView = hasEvents ? <EventListViewManager /> : loadingMessage;
   }
-  if (route === "TextView") {
-    currentView = hasEvents ? <EventListViewManager textOnly={true} /> : loadingMessage;
-  }
   if (route === "ShowsByVenueView") {
     currentView = hasEvents ? <ShowsByVenueView /> : loadingMessage;
   }
