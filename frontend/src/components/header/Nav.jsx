@@ -17,10 +17,6 @@ export default class Nav extends React.Component {
                 <div className='nav-items'>
                     <div className='nav-item nav-item-no-click'>Bay Area Shows</div>
 
-                    <Link to='/TextView'>
-                        <div className={`nav-item ${this.props.route === "TextView" ? "selected" : ""}`}>Text View</div>
-                    </Link>
-
                     <Link to='/TextAndImagesView'>
                         <div className={`nav-item ${(this.props.route === "TextAndImagesView") ? "selected" : ""}`}>Flyers View</div>
                     </Link>

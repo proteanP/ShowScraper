@@ -2,14 +2,12 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import {App} from './App';
 
-import { HashRouter, Routes, Route } from "react-router-dom";
+import { HashRouter, Navigate, Routes, Route } from "react-router-dom";
 import { RecoilRoot } from 'recoil';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
-const ROOT_VIEW = "MapView"
-// const ROOT_VIEW = "TextView"
-// const ROOT_VIEW = "TextAndImagesView"
+const ROOT_VIEW = "CalendarView"
 
 root.render(
   <React.StrictMode>
@@ -18,7 +16,7 @@ root.render(
         <Routes>
           <Route exact path="/" element={<App route={ROOT_VIEW} />} />
           <Route path="/TextAndImagesView" element={<App route='TextAndImagesView' />} />
-          <Route path="/TextView" element={<App route='TextView' />} />
+          <Route path="/TextView" element={<Navigate to="/CalendarView" replace />} />
           <Route path="/ShowsByVenueView" element={<App route='ShowsByVenueView' />} />
           <Route path="/CalendarView" element={<App route='CalendarView' />} />
           <Route path="/MapView" element={<App route='MapView' />} />
