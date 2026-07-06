@@ -8,6 +8,7 @@ import DayGroup from './DayGroup';
 import DayGroupTitle from './DayGroupTitle';
 import DayEventsGrid from './DayEventsGrid';
 import RegionBlock from './RegionBlock';
+import EventStructuredData from '../structured_data/EventStructuredData';
 
 export default function EventListView({
   id,
@@ -49,6 +50,7 @@ export default function EventListView({
 
   return (
     <div id={id} className='Events-list '>
+      <EventStructuredData eventsByDate={eventsByDate} />
       {dayGroups}
     </div>
   );
