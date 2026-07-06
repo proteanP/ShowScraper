@@ -15,10 +15,9 @@ const EventStructuredData = ({ eventsByDate }) => {
   if (!jsonLd) return null;
 
   return (
-    <script
-      type='application/ld+json'
-      dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd, null, 2) }}
-    />
+    <script type='application/ld+json'>
+      {JSON.stringify(jsonLd, null, 2)}
+    </script>
   );
 };
 
