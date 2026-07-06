@@ -12,6 +12,7 @@ import ShowsByVenueView from './components/pages/ShowsByVenueView';
 import CalendarViewManager from './components/pages/CalendarViewManager';
 import GcsDataLoader from "./utils/GcsDataLoader"
 import AIResearchModal from './components/ai_research/AIResearchModal';
+import { applyPageMetadata } from './utils/seoMetadata';
 import { useRecoilValue, useSetRecoilState } from 'recoil';
 import * as Atoms from './state/atoms';
 
@@ -19,6 +20,10 @@ function App({ route }) {
   const setEvents = useSetRecoilState(Atoms.eventsState);
   const setVenues = useSetRecoilState(Atoms.venuesState);
   const events = useRecoilValue(Atoms.eventsState);
+
+  useEffect(() => {
+    applyPageMetadata(route);
+  }, [route]);
 
   useEffect(() => {
     const fetchJsonData = async () => {
