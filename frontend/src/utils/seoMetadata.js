@@ -1,6 +1,6 @@
 const SITE_ORIGIN = 'https://bayareashows.org';
 const SITE_NAME = 'Bay Area Shows';
-const DEFAULT_DESCRIPTION = 'Find upcoming punk, indie, metal, experimental, and DIY concerts across San Francisco, Oakland, Berkeley, San Jose, and the Bay Area.';
+const DEFAULT_DESCRIPTION = 'Find upcoming live music and events across San Francisco, Oakland, Berkeley, San Jose, and the Bay Area.';
 const DEFAULT_IMAGE = `${SITE_ORIGIN}/assets/MissingImage.png`;
 const DEFAULT_IMAGE_ALT = 'Bay Area Shows flyer placeholder artwork';
 
