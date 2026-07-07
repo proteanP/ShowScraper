@@ -5,10 +5,10 @@
   "private": true,
   "dependencies": {
     "bulma": "^0.9.3",
-    "github-markdown-css": "^5.8.1",
+    "github-markdown-css": "^5.9.0",
     "jquery": "^3.6.0",
     "leaflet": "^1.9.4",
-    "moment": "^2.29.3",
+    "moment": "^2.30.1",
     "react": "^18.1.0",
     "react-bulma-components": "^4.1.0",
     "react-dom": "^18.1.0",
@@ -18,7 +18,7 @@
     "react-scripts": "5.0.1",
     "recoil": "^0.7.7",
     "remark-gfm": "^4.0.1",
-    "underscore": "^1.13.3"
+    "underscore": "^1.13.8"
   },
   "scripts": {
     "start": "react-scripts start",
