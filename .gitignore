@@ -12,3 +12,5 @@ __pycache__/
 llm-server/logs/
 llm-server/tasks/__pycache__/
 llm-server/tasks/logs/cache/
+frontend/build/
+
