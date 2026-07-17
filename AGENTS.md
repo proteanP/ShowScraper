@@ -6,6 +6,8 @@
 - Live site: `bayareashows.org`
 - Data: public JSON in GCS bucket `show-scraper-data/`
 - Repos of interest: `frontend/react-app`, `llm-server/`
+- The active ShowScraper workload runs natively on the `show-scraper` Sprite, without Docker.
+- The Compose file in this local Debian clone is retained as historical/reference material only. Do not use it to start or deploy ShowScraper on Debian, and do not treat it as part of the local service-normalization or Traefik migration work.
 
 ## LLM server (FastAPI)
 - Entry: `llm-server/main.py`
