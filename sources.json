@@ -440,6 +440,16 @@
       "img": "https://cdn.prod.website-files.com/699bda191c273ecfe3f38779/69a6471f2af800a63449d862_stage-hero-web.jpg"
     },
     {
+      "name": "BlackCatJazzSupperClub",
+      "commonName": "Black Cat Jazz Supper Club",
+      "website": "https://blackcatsf.com/",
+      "region": "San Francisco",
+      "mapLink": "",
+      "latlng": "37.7838333, -122.4144611",
+      "desc": "Tenderloin jazz supper club with intimate underground live shows, cocktails, and late-night dining.",
+      "img": "https://blackcatsf.com/wp-content/uploads/Downbeat-web-pic.png"
+    },
+    {
       "name": "TheList",
       "commonName": "The List",
       "website": "http://www.foopee.com/punk/the-list/",
