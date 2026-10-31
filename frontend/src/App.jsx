@@ -56,9 +56,6 @@ function App({ route }) {
   return (
       <div className="App-body">
         <div className="App-body-content">
-          <div style={{color: 'red', fontSize: '2rem', fontWeight: 'bold', textAlign: 'center', padding: '1rem'}}>
-            The scraper is down for maintenance, so new listings are not appearing right now.
-          </div>
           <Nav route={route} />
           {currentView}
           <AIResearchModal />
