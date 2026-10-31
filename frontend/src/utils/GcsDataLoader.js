@@ -2,6 +2,18 @@ import moment from 'moment';
 import _ from 'underscore';
 import $ from 'jquery';
 
+const NON_PLACES = ['zoom', 'online', 'rsvp for details'];
+const NON_PLACE_PREFIXES = ['email ', 'please email '];
+const ZOOM_SUFFIX = /\s+or\s+(via\s+)?zoom\b.*$/i;
+
+// Keep in sync with venue_name_for in Dagu/scripts/bay-area-shows/detect_missing_venues.py
+export function indybayVenueName(location) {
+  const place = (location || '').trim().replace(ZOOM_SUFFIX, '').trim();
+  const lowered = place.toLowerCase();
+  if (!place || NON_PLACES.includes(lowered) || NON_PLACE_PREFIXES.some(p => lowered.startsWith(p))) return null;
+  return place;
+}
+
 export default class GcsGcsDataLoader {
   static async loadVenueData() {
     const data = await $.getJSON("https://storage.googleapis.com/show-scraper-data/sources.json", { _: new Date().getTime()})
@@ -30,6 +42,9 @@ export default class GcsGcsDataLoader {
           const commonName = venue.commonName;
           modifiedVenue = { ...venue, commonName: `${data.venue} (via ${commonName})` };
           event.title = data.artists;
+        } else if (venue.name === "Indybay") {
+          const place = indybayVenueName(event.location);
+          if (place) modifiedVenue = { ...venue, commonName: `${place} (via ${venue.commonName})` };
         }
   
         let newEvent = {
