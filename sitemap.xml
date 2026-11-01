@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+    <loc>https://bayareashows.org/</loc>
+  </url>
+  <url>
+    <loc>https://bayareashows.org/#/TextAndImagesView</loc>
+  </url>
+  <url>
+    <loc>https://bayareashows.org/#/ShowsByVenueView</loc>
+  </url>
+  <url>
+    <loc>https://bayareashows.org/#/MapView</loc>
+  </url>
+  <url>
+    <loc>https://bayareashows.org/#/VenuesListView</loc>
+  </url>
+  <url>
+    <loc>https://bayareashows.org/#/About</loc>
+  </url>
+</urlset>
