@@ -1,53 +1,75 @@
+# Dependabot: one grouped PR a week per entry for minor and patch updates (group
+# `minor-patch`, which the Fable review gate in proteanP/services-directory may merge);
+# majors and security updates come as their own PRs and wait for Max.
+# See services-directory StackUpdate/README.md.
 version: 2
 updates:
-  - package-ecosystem: "bundler"
-    directory: "/"
+  - package-ecosystem: bundler
+    directory: /
     schedule:
-      interval: "weekly"
-      day: "monday"
-      time: "09:00"
-      timezone: "Etc/UTC"
+      interval: weekly
+      day: monday
+      time: "05:00"
+      timezone: America/Los_Angeles
+    cooldown:
+      default-days: 7
+    open-pull-requests-limit: 5
     groups:
-      bundler-minor-patch:
-        update-types:
-          - "minor"
-          - "patch"
+      minor-patch:
+        update-types: [minor, patch]
 
-  - package-ecosystem: "npm"
-    directory: "/frontend"
+  - package-ecosystem: npm
+    directory: /frontend
     schedule:
-      interval: "weekly"
-      day: "monday"
-      time: "09:00"
-      timezone: "Etc/UTC"
+      interval: weekly
+      day: monday
+      time: "05:00"
+      timezone: America/Los_Angeles
+    cooldown:
+      default-days: 7
+    open-pull-requests-limit: 5
     groups:
-      frontend-npm-minor-patch:
-        update-types:
-          - "minor"
-          - "patch"
+      minor-patch:
+        update-types: [minor, patch]
 
-  - package-ecosystem: "pip"
-    directory: "/llm-server"
+  - package-ecosystem: pip
+    directory: /llm-server
     schedule:
-      interval: "weekly"
-      day: "monday"
-      time: "09:00"
-      timezone: "Etc/UTC"
+      interval: weekly
+      day: monday
+      time: "05:00"
+      timezone: America/Los_Angeles
+    cooldown:
+      default-days: 7
+    open-pull-requests-limit: 5
     groups:
-      llm-server-pip-minor-patch:
-        update-types:
-          - "minor"
-          - "patch"
+      minor-patch:
+        update-types: [minor, patch]
 
-  - package-ecosystem: "github-actions"
-    directory: "/"
+  - package-ecosystem: docker
+    directory: /llm-server
     schedule:
-      interval: "weekly"
-      day: "monday"
-      time: "09:00"
-      timezone: "Etc/UTC"
+      interval: weekly
+      day: monday
+      time: "05:00"
+      timezone: America/Los_Angeles
+    cooldown:
+      default-days: 7
+    open-pull-requests-limit: 5
     groups:
-      github-actions-minor-patch:
-        update-types:
-          - "minor"
-          - "patch"
+      minor-patch:
+        update-types: [minor, patch]
+
+  - package-ecosystem: docker-compose
+    directory: /
+    schedule:
+      interval: weekly
+      day: monday
+      time: "05:00"
+      timezone: America/Los_Angeles
+    cooldown:
+      default-days: 7
+    open-pull-requests-limit: 5
+    groups:
+      minor-patch:
+        update-types: [minor, patch]
