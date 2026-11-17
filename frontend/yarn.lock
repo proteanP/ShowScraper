@@ -1006,12 +1006,11 @@
     "@babel/plugin-transform-typescript" "^7.16.7"
 
 "@babel/runtime-corejs3@^7.10.2":
-  version "7.17.9"
-  resolved "https://registry.npmjs.org/@babel/runtime-corejs3/-/runtime-corejs3-7.17.9.tgz"
-  integrity sha512-WxYHHUWF2uZ7Hp1K+D1xQgbgkGUfA+5UPOegEXGt2Y5SMog/rYCVaifLZDbw8UkNXozEqqrZTy6bglL7xTaCOw==
+  version "7.29.14"
+  resolved "https://registry.yarnpkg.com/@babel/runtime-corejs3/-/runtime-corejs3-7.29.14.tgz#2c6e823cd2ac6dfc902e91822ae4c7d3c0ef388a"
+  integrity sha512-uMYNeB6qoKZZBjbjFglzmViaPlIIbmsP70tsaVWUc9bNLZP0btWlnKTY7cEf3mgsaVLe/vby2kfdptiVkpA1vw==
   dependencies:
-    core-js-pure "^3.20.2"
-    regenerator-runtime "^0.13.4"
+    core-js-pure "^3.48.0"
 
 "@babel/runtime@^7.10.2", "@babel/runtime@^7.11.2", "@babel/runtime@^7.12.5", "@babel/runtime@^7.16.3", "@babel/runtime@^7.8.4":
   version "7.17.9"
@@ -3108,7 +3107,12 @@ core-js-compat@^3.21.0, core-js-compat@^3.22.1:
     browserslist "^4.20.3"
     semver "7.0.0"
 
-core-js-pure@^3.20.2, core-js-pure@^3.8.1:
+core-js-pure@^3.48.0:
+  version "3.51.0"
+  resolved "https://registry.yarnpkg.com/core-js-pure/-/core-js-pure-3.51.0.tgz#5b57ebf028ba61502177c27bc24a9c162c1c120b"
+  integrity sha512-NE4SFDJ+qzQeqHG2vVSNwopzS6zZNPYJ5kinIqs+OofTqGzOmICgT89E/yvS9XY7rwb3eU1utWXTJ9nVFqv74A==
+
+core-js-pure@^3.8.1:
   version "3.22.3"
   resolved "https://registry.npmjs.org/core-js-pure/-/core-js-pure-3.22.3.tgz"
   integrity sha512-oN88zz7nmKROMy8GOjs+LN+0LedIvbMdnB5XsTlhcOg1WGARt9l0LFg0zohdoFmCsEZ1h2ZbSQ6azj3M+vhzwQ==
