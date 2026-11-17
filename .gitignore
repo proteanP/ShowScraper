@@ -1,5 +1,4 @@
 .env
-llm-server/.env
 credentials/*.json
 .DS_Store
 debug/*
@@ -9,8 +8,5 @@ log_full.txt
 venv/
 __pycache__/
 *.pyc
-llm-server/logs/
-llm-server/tasks/__pycache__/
-llm-server/tasks/logs/cache/
 frontend/build/
 
