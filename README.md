@@ -1,55 +1,18 @@
 # ShowScraper
 
-ShowScraper now contains two services:
+The React frontend for [bayareashows.org](https://bayareashows.org), which lists Bay Area concerts.
 
-- **Frontend**: React app for browsing Bay Area concert listings and running AI-powered event research.
-- **LLM Server**: FastAPI backend that powers the AI research feature via streaming endpoints.
+The scraper lives in a separate repository: https://github.com/proteanP/ShowScraper_Standalone
 
-The scraper has been moved to a separate repository:
-
-- https://github.com/proteanP/ShowScraper_Standalone
-
-## Repository Layout
-
-- `frontend/`: React application
-- `llm-server/`: Python FastAPI service for AI research
-
-## Frontend Quickstart
+## Frontend quickstart
 
 1. `cd frontend`
-2. `npm install`
-3. `npm run dev`
+2. `yarn install`
+3. `yarn start`
 
-To build the frontend locally:
-
-- `cd frontend`
-- `npm run build`
-
-Frontend deployment runs through GitHub Pages Actions after changes are merged to `master`.
-
-## LLM Server Quickstart
-
-1. `cd llm-server`
-2. `cp .env.example .env`
-3. Add required API keys to `.env`:
-   - `OPENAI_API_KEY=...`
-   - `SERPER_API_KEY=...`
-4. `uv venv venv`
-5. `source venv/bin/activate`
-6. `uv pip install -r requirements.txt`
-7. `python main.py`
-
-The server runs on `http://localhost:8000` by default.
-
-## LLM Server with Docker
-
-1. `cp llm-server/.env.example llm-server/.env`
-2. Add the required API keys to `llm-server/.env`
-3. `docker compose up --build llm-server`
-
-The container exposes the API on `http://localhost:8000` and persists server logs/cache under `llm-server/logs/` and `llm-server/tasks/logs/cache/`.
+Build locally with `yarn build` in `frontend/`. Deployment runs through GitHub Pages Actions after changes are merged to `master`.
 
 ## Notes
 
-- Frontend event data is still read from the public GCS bucket (`show-scraper-data`).
-- Scraper development, execution, and scraper-specific docs now live in the separate scraper repo.
+- Event data is read from the public GCS bucket `show-scraper-data`.
+- The AI research backend (`llm-server/`) was removed on 2026-11-17; it is in git history.
