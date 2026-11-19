@@ -1,6 +1,6 @@
 # Dependabot: one grouped PR a week per entry for minor and patch updates (group
 # `minor-patch`, which the Fable review gate in proteanP/services-directory may merge);
-# majors and security updates come as their own PRs and wait for Max.
+# majors come as their own PRs and security updates as one grouped PR; both wait for Max.
 # See services-directory StackUpdate/README.md.
 version: 2
 updates:
@@ -17,3 +17,6 @@ updates:
     groups:
       minor-patch:
         update-types: [minor, patch]
+      security:
+        applies-to: security-updates
+        patterns: ["*"]
