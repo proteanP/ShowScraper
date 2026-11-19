@@ -3,7 +3,7 @@ import AiModalRefetchButton from './AiModalRefetchButton';
 import AiModalCloseButton from './AiModalCloseButton';
 
 const AiModalHeader = ({ onRefetch, onClose }) => {
-  const isProduction = process.env.NODE_ENV === 'production';
+  const isProduction = import.meta.env.PROD;
   
   return (
     <div className="ai-modal-header">
