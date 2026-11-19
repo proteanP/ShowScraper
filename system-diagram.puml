@@ -110,7 +110,7 @@ Handler --> AIModal : SSE stream response
 AIModal --> State : cache to localStorage
 
 ' === DEPLOYMENT ===
-ReactApp --> GitHubPages : yarn deploy\n(gh-pages branch)
+ReactApp --> GitHubPages : GitHub Actions\n(on merge to master)
 
 ' === NOTES ===
 note right of Scraper

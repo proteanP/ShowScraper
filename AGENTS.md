@@ -8,8 +8,8 @@
 - Main code: `frontend/`
 - The active ShowScraper workload runs natively on the `show-scraper` Sprite, without Docker.
 
-## Frontend (Create React App)
-- Location: `frontend/react-app/`; uses Bulma, Leaflet, Moment, React Markdown (GitHub dark CSS).
+## Frontend (React + Vite)
+- Location: `frontend/` (Vite, config in `vite.config.js`; tests run with Vitest); uses Bulma, Leaflet, Moment, React Markdown (GitHub dark CSS).
 - Data flow: `src/utils/GcsDataLoader.js` fetches `sources.json` + per-venue `{venue}.json` from GCS; groups events by `MM-DD` (year omitted to avoid Dec/Jan issues).
 - Views: list (image/text), text-only, map, venues list, about. Root `src/App.jsx`; route prop controls view.
 - Additional view: `Shows by Venue` provides venue-name search across all loaded dates and links users to the Venues page for the directory.
@@ -20,7 +20,7 @@
   - Caching: `localStorage` per event+mode; “Re-fetch” clears caches. Sample mode via `API_CONFIG.USE_SAMPLE_DATA=true`.
 - Calendar links: Google/ICS generated in `EventListItem.jsx` & `EventModal.jsx`; missing images fallback to `MissingImage.png`.
 - Venue coordinate overrides: canonical tuples are in `frontend/src/venueLocationOverrides.json`; validate or append proposal batches with `npm run venue-overrides:update -- --input <file> [--dry-run]` from `frontend/`.
-- Dev start: `npm install && npm start` in `frontend/`.
+- Dev start: `yarn install && yarn start` in `frontend/`. Tests: `yarn test`.
 
 ## What to do as an agent
 - Default to consulting this file first. Keep AGENTS.md updated; avoid duplicative docs.

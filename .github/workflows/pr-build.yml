@@ -23,5 +23,4 @@ jobs:
           node-version: 22
       - run: yarn install --frozen-lockfile
       - run: yarn build
-        env:
-          CI: "false"   # react-scripts would fail the build on lint warnings
+      - run: yarn test
